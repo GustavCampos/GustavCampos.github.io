@@ -1,0 +1,15 @@
+img.fill-white {
+	filter: brightness(0) invert(100%)
+}
+
+img.fill-primary {
+	filter: brightness(0) invert(80%) sepia(45%) saturate(4641%) hue-rotate(120deg) brightness(89%) contrast(103%);
+}
+
+img.fill-link {
+	filter: brightness(0) invert(52%) sepia(41%) saturate(6688%) hue-rotate(202deg) brightness(87%) contrast(97%);
+}
+
+img.fill-warning {
+	filter: brightness(0) invert(97%) sepia(33%) saturate(4932%) hue-rotate(316deg) brightness(109%) contrast(102%);
+}

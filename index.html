@@ -1,1 +1,118 @@
-<h1>This will be my personal portfólio!!!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gustavo Campos</title>
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+    	<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+    			<a class="navbar-item" href="https://gustavcampos.github.io">
+    				<span>Gustavo Campos</span>
+   				</a>
+		
+			    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+			    </a>
+			</div>
+
+			<div class="navbar-menu" id="navMenu">
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons has-addons">
+							<button class="button is-info is-selected is-disabled lang-button" value="en">EN</button>
+							<button class="button lang-button" value="pt-br">PT-BR</button>
+						</div>
+					</div>					
+					
+					<div class="navbar-item">
+						<div class="dropdown">
+							<div class="dropdown-trigger">
+								<button class="button is-text" aria-haspopup="true" aria-controls="theme-dropdown" id="theme-button">
+									<img src="assets/icons/sun.svg" class="fill-warning is-hidden">
+									<img src="assets/icons/moon.svg" class="fill-link is-hidden">
+									<img src="assets/icons/system.svg" class="fill-primary">
+								</button>
+							</div>
+							
+							<div class="dropdown-menu" id="theme-dropdown" role="menu">
+								<div class="dropdown-content">
+									<div class="dropdown-item">
+										<button class="button is-warning is-outlined is-fullwidth theme-button" data-schema="light">
+											<img src="assets/icons/sun.svg" class="fill-warning">
+											<span>Light</span>
+										</button>
+									</div>
+
+									<div class="dropdown-item">
+										<button class="button is-link is-outlined is-fullwidth theme-button" data-schema="dark">
+											<img src="assets/icons/moon.svg" class="fill-link">
+											<span>Dark</span>
+										</button>
+									</div>
+									
+									<div class="dropdown-item">
+										<button class="button is-primary is-outlined is-fullwidth theme-button" data-schema="system">
+											<img src="assets/icons/system.svg" class="fill-primary">
+											<span>System</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				
+				
+					<div class="navbar-item">
+						<button class="button is-dark">
+						    <img src="assets/icons/github_logo.svg" alt="github logo" class="icon fill-white">
+						    <span>GitHub</span>
+						</button>
+					</div>
+				</div>
+			</div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Section Title</h2>
+            <p>Your content goes here.</p>
+        </section>
+        <!-- Add more sections as needed -->
+    </main>
+
+    <footer class="footer">
+    	<div class="content has-text-centered">
+        	<p>&copy; 2024 Gustavo Campos.</p>
+
+			<div data-lang="en">
+	        	<p>
+		        	Vectors and icons by <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
+	        	</p>
+    		</div>
+			
+    		<div data-lang="pt-br" class="is-hidden">
+				<p>
+					Vetores e ícones <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> sob a licença CC Attribution via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
+				</p>
+    		</div>
+    	</div>
+        <!-- Footer content goes here -->
+    </footer>
+
+	<!-- Loading Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/theme.js"></script>
+	<script src="js/lang.js"></script>
+</body>
+</html>
