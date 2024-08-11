@@ -7,18 +7,17 @@
     <title>Gustavo Campos</title>
     
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style/css/style.css">
 </head>
 <body>
-    <header>
+	<header>
     	<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
     			<a class="navbar-item" href="https://gustavcampos.github.io">
-    				<span>Gustavo Campos</span>
+    				<span class="title">GUSTAVO CAMPOS</span>
    				</a>
 		
-			    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+			    <a role="button" class="navbar-burger is-success" aria-label="menu" aria-expanded="false" data-target="navMenu">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
@@ -27,21 +26,30 @@
 			</div>
 
 			<div class="navbar-menu" id="navMenu">
-				<div class="navbar-end">
+				<div class="navbar-start">
+					<a class="navbar-item" href="">
+	    				<span data-lang="en">About me</span>
+	    				<span data-lang="pt-br">Sobre Mim</span>
+	   				</a>
+	   				
+					<a class="navbar-item" href="">
+	    				<span data-lang="en">Projects</span>
+	    				<span data-lang="pt-br">Projetos</span>
+	   				</a>
+
+	   				<a class="navbar-item" href="">
+	    				<span data-lang="en">Contact Me</span>
+	    				<span data-lang="pt-br">Meu Contatos</span>
+	   				</a>
+				</div>
+			
+				<div class="navbar-end">					
 					<div class="navbar-item">
-						<div class="buttons has-addons">
-							<button class="button is-info is-selected is-disabled lang-button" value="en">EN</button>
-							<button class="button lang-button" value="pt-br">PT-BR</button>
-						</div>
-					</div>					
-					
-					<div class="navbar-item">
-						<div class="dropdown">
-							<div class="dropdown-trigger">
-								<button class="button is-text" aria-haspopup="true" aria-controls="theme-dropdown" id="theme-button">
-									<img src="assets/icons/sun.svg" class="fill-warning is-hidden">
-									<img src="assets/icons/moon.svg" class="fill-link is-hidden">
-									<img src="assets/icons/system.svg" class="fill-primary">
+						<div class="dropdown" style="width: 100%">
+							<div class="dropdown-trigger" style="width: 100%">	
+								<button class="button is-fullwidth is-text" aria-haspopup="true" aria-controls="theme-dropdown" id="theme-button">
+									<img src="assets/icons/sun.svg" class="svg fill warning is-hidden">
+									<img src="assets/icons/moon.svg" class="svg fill primary is-hidden">
 								</button>
 							</div>
 							
@@ -49,22 +57,25 @@
 								<div class="dropdown-content">
 									<div class="dropdown-item">
 										<button class="button is-warning is-outlined is-fullwidth theme-button" data-schema="light">
-											<img src="assets/icons/sun.svg" class="fill-warning">
-											<span>Light</span>
+											<img src="assets/icons/sun.svg" class="icon svg fill warning">
+											<span data-lang="en">Light</span>
+											<span data-lang="pt-br">Claro</span>
 										</button>
 									</div>
 
 									<div class="dropdown-item">
-										<button class="button is-link is-outlined is-fullwidth theme-button" data-schema="dark">
-											<img src="assets/icons/moon.svg" class="fill-link">
-											<span>Dark</span>
+										<button class="button is-primary is-outlined is-fullwidth theme-button" data-schema="dark">
+											<img src="assets/icons/moon.svg" class="icon svg fill primary">
+											<span data-lang="en">Dark</span>
+											<span data-lang="pt-br">Escuro</span>
 										</button>
 									</div>
 									
 									<div class="dropdown-item">
-										<button class="button is-primary is-outlined is-fullwidth theme-button" data-schema="system">
-											<img src="assets/icons/system.svg" class="fill-primary">
-											<span>System</span>
+										<button class="button is-success is-outlined is-fullwidth theme-button" data-schema="system">
+											<img src="assets/icons/system.svg" class="icon svg fill success">
+											<span data-lang="en">System</span>
+											<span data-lang="pt-br">Sistema</span>
 										</button>
 									</div>
 								</div>
@@ -73,10 +84,17 @@
 					</div>				
 				
 					<div class="navbar-item">
-						<button class="button is-dark">
-						    <img src="assets/icons/github_logo.svg" alt="github logo" class="icon fill-white">
+						<div class="buttons has-addons">
+							<button style="width: 50%" class="button is-primary is-selected is-disabled lang-button" value="en">EN</button>
+							<button style="width: 50%" class="button lang-button" value="pt-br">PT-BR</button>
+						</div>
+					</div>
+										
+					<div class="navbar-item">
+						<a class="button is-fullwidth is-dark" target="_blank" href="https://github.com/GustavCampos">
+						    <img src="assets/icons/github_logo.svg" alt="github logo" class="icon svg fill white">
 						    <span>GitHub</span>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -84,34 +102,33 @@
     </header>
 
     <main>
-        <section>
-            <h2>Section Title</h2>
-            <p>Your content goes here.</p>
-        </section>
-        <!-- Add more sections as needed -->
+   		<section class="hero is-primary">
+   			<div class="hero-body">
+		    	<div data-lang="en">
+		        	<h1 class="title">No content yet!</h1>
+		    	</div>
+
+				<div data-lang="pt-br">
+		        	<h1 class="title">Nenhum conteúdo ainda!</h1>
+		    	</div>
+   			</div>
+   		</section>
     </main>
 
     <footer class="footer">
     	<div class="content has-text-centered">
         	<p>&copy; 2024 Gustavo Campos.</p>
 
-			<div data-lang="en">
-	        	<p>
-		        	Vectors and icons by <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
-	        	</p>
-    		</div>
-			
-    		<div data-lang="pt-br" class="is-hidden">
-				<p>
-					Vetores e ícones <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> sob a licença CC Attribution via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
-				</p>
-    		</div>
+			<p data-lang="en">Vectors and icons by <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.</p>			
+			<p data-lang="pt-br">Vetores e ícones por <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> sob a licença CC Attribution via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.</p>
+    		
+			<a href="https://bulma.io" target="_blank"><img src="assets/images/made-with-bulma.png" alt="Made with Bulma" width="256" height="48"></a>
     	</div>
-        <!-- Footer content goes here -->
     </footer>
 
-	<!-- Loading Scripts -->
+	<!-- Loading Scripts -->	
     <script src="js/navbar.js"></script>
+	<script src="js/dropdown.js"></script>    
     <script src="js/theme.js"></script>
 	<script src="js/lang.js"></script>
 </body>
