@@ -1,0 +1,31 @@
+// Most awsoe site to color svg: https://isotropic.co/tool/hex-color-to-css-filter/
+
+@mixin filter-black {filter: brightness(0);}
+@mixin filter-white {filter: brightness(0) invert(100%);}
+@mixin filter-whitesmoke {filter: brightness(0) invert(100%) sepia(6%) saturate(21%) hue-rotate(335deg) brightness(114%) contrast(92%);}
+@mixin filter-jet{filter: brightness(0) invert(16%) sepia(0%) saturate(1567%) hue-rotate(213deg) brightness(95%) contrast(83%);}
+
+@mixin svg-fill-filter($theme) {
+	@if $theme == "light" {
+		@include filter-jet
+  	} @else if $theme == "dark" {
+    	@include filter-whitesmoke;
+  	}
+}
+
+html[data-theme="light"],
+html[data-theme="dark"] {
+	.svg.fill.text {
+		@include svg-fill-filter(attr(data-theme));
+	}
+}
+
+.svg.fill {
+	&.black {@include filter-black;}
+	&.white {@include filter-white;}
+	&.primary {filter: brightness(0) invert(31%) sepia(7%) saturate(6106%) hue-rotate(211deg) brightness(91%) contrast(88%);}
+	&.link {filter: brightness(0) invert(52%) sepia(41%) saturate(6688%) hue-rotate(202deg) brightness(87%) contrast(97%);}
+	&.info {filter: brightness(0) invert(48%) sepia(44%) saturate(1381%) hue-rotate(170deg) brightness(99%) contrast(89%);}
+	&.success{filter: brightness(0) invert(63%) sepia(35%) saturate(844%) hue-rotate(88deg) brightness(94%) contrast(105%);}
+	&.warning {filter: brightness(0) invert(97%) sepia(33%) saturate(4932%) hue-rotate(316deg) brightness(109%) contrast(102%);}
+}
