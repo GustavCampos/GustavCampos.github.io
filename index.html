@@ -11,13 +11,13 @@
 </head>
 <body>
 	<header>
-    	<nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    	<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
     			<a class="navbar-item" href="https://gustavcampos.github.io">
-    				<span class="title">GUSTAVO CAMPOS</span>
+    				<span class="title has-text-primary">GUSTAVO CAMPOS</span>
    				</a>
 		
-			    <a role="button" class="navbar-burger is-success" aria-label="menu" aria-expanded="false" data-target="navMenu">
+			    <a class="navbar-burger is-success" aria-label="menu" aria-expanded="false" data-target="navMenu">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
@@ -48,8 +48,8 @@
 						<div class="dropdown" style="width: 100%">
 							<div class="dropdown-trigger" style="width: 100%">	
 								<button class="button is-fullwidth is-text" aria-haspopup="true" aria-controls="theme-dropdown" id="theme-button">
-									<img src="assets/icons/sun.svg" class="svg fill warning is-hidden">
-									<img src="assets/icons/moon.svg" class="svg fill primary is-hidden">
+									<img src="assets/icons/sun.svg" alt="sun" class="svg fill warning is-hidden">
+									<img src="assets/icons/moon.svg" alt="moon" class="svg fill primary is-hidden">
 								</button>
 							</div>
 							
@@ -57,7 +57,7 @@
 								<div class="dropdown-content">
 									<div class="dropdown-item">
 										<button class="button is-warning is-outlined is-fullwidth theme-button" data-schema="light">
-											<img src="assets/icons/sun.svg" class="icon svg fill warning">
+											<img src="assets/icons/sun.svg" alt="sun" class="icon svg fill warning">
 											<span data-lang="en">Light</span>
 											<span data-lang="pt-br">Claro</span>
 										</button>
@@ -65,7 +65,7 @@
 
 									<div class="dropdown-item">
 										<button class="button is-primary is-outlined is-fullwidth theme-button" data-schema="dark">
-											<img src="assets/icons/moon.svg" class="icon svg fill primary">
+											<img src="assets/icons/moon.svg" alt="moon" class="icon svg fill primary">
 											<span data-lang="en">Dark</span>
 											<span data-lang="pt-br">Escuro</span>
 										</button>
@@ -73,7 +73,7 @@
 									
 									<div class="dropdown-item">
 										<button class="button is-success is-outlined is-fullwidth theme-button" data-schema="system">
-											<img src="assets/icons/system.svg" class="icon svg fill success">
+											<img src="assets/icons/system.svg" alt="computer" class="icon svg fill success">
 											<span data-lang="en">System</span>
 											<span data-lang="pt-br">Sistema</span>
 										</button>
@@ -103,22 +103,43 @@
 
     <main>
    		<section class="hero is-primary is-fullheight-with-navbar">
+			<div class="hero-head"></div>
+
    			<div class="hero-body">
    				<div class="container">
 	   				<div class="columns">
 	   					<div class="column">
-					    	<div data-lang="en">
-					        	<h1 class="title">No content yet!</h1>
-					    	</div>
-
-							<div data-lang="pt-br">
-					        	<h1 class="title">Nenhum conteúdo ainda!</h1>
-					    	</div>
+							<div id="profile-carousel" current-image="0">
+								<figure class="image is-square">
+									<img class="is-rounded" src="assets/images/gustavo_1.png" alt="gustavo 1">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_2.png" alt="gustavo 2">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_3.png" alt="gustavo 3">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_4.png" alt="gustavo 4">
+								</figure>
+							</div>
 	   					</div>
+
+						<div class="column is-three-fifths is-flex is-justify-content-center is-align-items-center">
+							<div class=" has-text-centered">
+								<h1 class="title is-size-1">Welcome!</h1>
+								<p class="subtitle is-size-2">My portfolio starts here.</p>
+							</div>
+						</div>
 	   				</div>
    				</div>
    			</div>
+
+			<div class="hero-footer">
+				<a href="#projects-section" class="button is-primary is-fullwidth">
+					<img class="icon svg fill white animate up-down" src="assets/icons/arrow-down.svg" alt="">
+				</a>
+			</div>
    		</section>
+
+		<section class="hero is-warning is-fullheight"></section>
+		<section class="hero is-medium is-link" id="projects-section">
+			<h2 class="title is-1">Project</h2>
+		</section>
     </main>
 
     <footer class="footer">
@@ -137,5 +158,6 @@
 	<script src="js/dropdown.js"></script>    
     <script src="js/theme.js"></script>
 	<script src="js/lang.js"></script>
+	<script src="js/profile_carousel.js"></script>
 </body>
 </html>

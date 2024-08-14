@@ -12,5 +12,7 @@ $primary: hsl(247, 37%, 45%);
 @import "../../node_modules/bulma/sass";
 
 // Importing custom css
+@import "debug.scss";
 @import "svg.scss";
+@import "animations.scss";
 

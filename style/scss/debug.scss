@@ -1,0 +1,12 @@
+.debug {
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+
+    &.big {border-width: 5px;}
+
+    &.white {border-color: white;}
+    &.black {border-color: black;}
+    &.green {border-color: green;}
+    &.blue {border-color: blue;}
+}
