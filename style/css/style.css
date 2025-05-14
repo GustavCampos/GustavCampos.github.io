@@ -22457,6 +22457,27 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+.debug {
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+}
+.debug.big {
+  border-width: 5px;
+}
+.debug.white {
+  border-color: white;
+}
+.debug.black {
+  border-color: black;
+}
+.debug.green {
+  border-color: green;
+}
+.debug.blue {
+  border-color: blue;
+}
+
 .svg.fill.black {
   filter: brightness(0);
 }
@@ -22477,6 +22498,21 @@ has-background-danger.is-hoverable:active {
 }
 .svg.fill.warning {
   filter: brightness(0) invert(97%) sepia(33%) saturate(4932%) hue-rotate(316deg) brightness(109%) contrast(102%);
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate.up-down {
+  animation: up-down 1s infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
