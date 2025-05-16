@@ -22457,6 +22457,10 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+html {
+  overflow: hidden;
+}
+
 .debug {
   border-width: 1px;
   border-style: solid;
@@ -22513,6 +22517,79 @@ has-background-danger.is-hoverable:active {
 }
 .animate.up-down {
   animation: up-down 1s infinite;
+}
+
+.on-hover-pointer:hover {
+  cursor: pointer;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.container.x-scroller {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container.x-scroller > .columns {
+  height: 100%;
+  flex-wrap: nowrap;
+}
+.container.x-scroller > .columns > .column {
+  height: 100%;
+}
+.container.x-scroller > .columns > .column > div {
+  max-width: calc(100vw - 48px);
+}
+.container.x-scroller > .columns > .column > div.width-1 {
+  width: 100px;
+}
+.container.x-scroller > .columns > .column > div.width-2 {
+  width: 200px;
+}
+.container.x-scroller > .columns > .column > div.width-3 {
+  width: 300px;
+}
+.container.x-scroller > .columns > .column > div.width-4 {
+  width: 400px;
+}
+.container.x-scroller > .columns > .column > div.width-5 {
+  width: 500px;
+}
+.container.x-scroller > .columns > .column > div.width-6 {
+  width: 600px;
+}
+.container.x-scroller > .columns > .column > div.width-7 {
+  width: 700px;
+}
+.container.x-scroller > .columns > .column > div.width-8 {
+  width: 800px;
+}
+.container.x-scroller > .columns > .column > div.width-9 {
+  width: 900px;
+}
+.container.x-scroller > .columns > .column > div.width-10 {
+  width: 1000px;
+}
+.container.x-scroller > .columns > .column > div.width-half {
+  width: 50vw;
+}
+.container.x-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.text-box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-box > div {
+  min-width: 300px;
+  width: 50%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

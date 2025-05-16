@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gustavo Campos</title>
+	
+	<!-- Icon CDN -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style/css/style.css">
@@ -27,17 +30,17 @@
 
 			<div class="navbar-menu" id="navMenu">
 				<div class="navbar-start">
-					<a class="navbar-item is-capitalized" href="">
+					<a class="navbar-item is-capitalized" href="#about-me">
 	    				<span data-lang="en">about me</span>
 	    				<span data-lang="pt-br">sobre mim</span>
 	   				</a>
 	   				
-					<a class="navbar-item is-capitalized" href="">
+					<a class="navbar-item is-capitalized" href="#projects">
 	    				<span data-lang="en">Projects</span>
 	    				<span data-lang="pt-br">Projetos</span>
 	   				</a>
 
-	   				<a class="navbar-item is-capitalized" href="">
+	   				<a class="navbar-item is-capitalized" href="#contact-me">
 	    				<span data-lang="en">Contact Me</span>
 	    				<span data-lang="pt-br">Meu Contatos</span>
 	   				</a>
@@ -47,9 +50,8 @@
 					<div class="navbar-item">
 						<div class="dropdown" style="width: 100%">
 							<div class="dropdown-trigger" style="width: 100%">	
-								<button class="button is-fullwidth is-text" aria-haspopup="true" aria-controls="theme-dropdown" id="theme-button">
-									<img src="assets/icons/sun.svg" alt="sun" class="svg fill warning is-hidden">
-									<img src="assets/icons/moon.svg" alt="moon" class="svg fill primary is-hidden">
+								<button id="theme-button" class="button is-text is-fullwidth" aria-haspopup="true" aria-controls="theme-dropdown"style="text-decoration: none;">
+									<span class="icon"><i class=""></i></span>
 								</button>
 							</div>
 							
@@ -57,7 +59,7 @@
 								<div class="dropdown-content">
 									<div class="dropdown-item">
 										<button class="button is-warning is-outlined is-fullwidth theme-button" data-schema="light">
-											<img src="assets/icons/sun.svg" alt="sun" class="icon svg fill warning">
+											<span class="icon has-text-warning"><i class="fa-solid fa-sun"></i></span>
 											<span data-lang="en">Light</span>
 											<span data-lang="pt-br">Claro</span>
 										</button>
@@ -65,7 +67,7 @@
 
 									<div class="dropdown-item">
 										<button class="button is-primary is-outlined is-fullwidth theme-button" data-schema="dark">
-											<img src="assets/icons/moon.svg" alt="moon" class="icon svg fill primary">
+											<span class="icon has-text-primary"><i class="fa-solid fa-moon"></i></span>
 											<span data-lang="en">Dark</span>
 											<span data-lang="pt-br">Escuro</span>
 										</button>
@@ -73,7 +75,7 @@
 									
 									<div class="dropdown-item">
 										<button class="button is-success is-outlined is-fullwidth theme-button" data-schema="system">
-											<img src="assets/icons/system.svg" alt="computer" class="icon svg fill success">
+											<span class="icon has-text-success"><i class="fa-solid fa-desktop"></i></span>
 											<span data-lang="en">System</span>
 											<span data-lang="pt-br">Sistema</span>
 										</button>
@@ -109,20 +111,27 @@
    				<div class="container">
 	   				<div class="columns">
 	   					<div class="column">
-							<div id="profile-carousel" current-image="0">
+							<div id="profile-carousel" class="on-hover-pointer" current-image="0">
 								<figure class="image is-square">
-									<img class="is-rounded" src="assets/images/gustavo_1.png" alt="gustavo 1">
-									<img class="is-rounded is-hidden" src="assets/images/gustavo_2.png" alt="gustavo 2">
-									<img class="is-rounded is-hidden" src="assets/images/gustavo_3.png" alt="gustavo 3">
-									<img class="is-rounded is-hidden" src="assets/images/gustavo_4.png" alt="gustavo 4">
+									<img class="is-rounded" src="assets/images/gustavo_5.png" alt="gustavo 1">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_1.png" alt="gustavo 2">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_2.png" alt="gustavo 3">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_3.png" alt="gustavo 4">
+									<img class="is-rounded is-hidden" src="assets/images/gustavo_4.png" alt="gustavo 5">
 								</figure>
 							</div>
 	   					</div>
 
 						<div class="column is-three-fifths is-flex is-justify-content-center is-align-items-center">
 							<div class=" has-text-centered">
-								<h1 class="title is-size-1">Welcome!</h1>
-								<p class="subtitle is-size-2">My portfolio starts here.</p>
+								<h1 class="title is-size-1">
+									<span data-lang="en">Need a Dev?</span>
+									<span data-lang="pt-br">Precisa de um Dev?</span>
+								</h1>
+								<p class="subtitle is-size-3">
+									<span data-lang="en">I connect buttons to databases <br> - and sprinkle in some magic.</span>
+									<span data-lang="pt-br">Conecto botões a banco de dados <br> - com uns feitiços no caminho.</span>
+								</p>
 							</div>
 						</div>
 	   				</div>
@@ -130,25 +139,243 @@
    			</div>
 
 			<div class="hero-footer">
-				<a href="#projects-section" class="button is-primary is-fullwidth">
-					<img class="icon svg fill white animate up-down" src="assets/icons/arrow-down.svg" alt="">
+				<a href="#about-me" class="button is-primary is-fullwidth is-large">
+					<span class="icon is-medium animate up-down"><i class="fa-2x fa-solid fa-caret-down"></i></span>
 				</a>
 			</div>
    		</section>
 
-		<section class="hero is-warning is-fullheight"></section>
-		<section class="hero is-medium is-link" id="projects-section">
-			<h2 class="title is-1">Project</h2>
+		<section id="about-me" data-x-wrapper class="is-flex is-flex-direction-column" style="height: 100vh;">
+			<div class="hero">
+				<div class="hero-body">
+					<div>
+						<h2 class="title">
+							<span data-lang="en">About-me</span>
+							<span data-lang="pt-br">Sobre mim</span>
+						</h2>
+						<p class="subtitle">
+							<span data-lang="en">Who i am</span>
+							<span data-lang="pt-br">Quem eu sou</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container is-fluid is-flex-grow-1 x-scroller">
+				<div class="columns is-mobile">
+					<div class="column">
+						<div class="width-7 text-box">
+							<div class="is-size-4">
+								<div data-lang="en">
+									Hi, I'm Gustavo Campos, a <strong>fullstack</strong> developer.
+									<br><br>
+									I enjoy bridging the gap between development and deployment — but I also love crafting interfaces when I get the chance.
+								</div>
+								<span data-lang="pt-br">
+									Oi, eu sou o Gustavo Campos, desenvolvedor <strong>fullstack</strong>.
+									<br><br>
+									Gosto de conectar o desenvolvimento e implementação — também adoro criar interfaces sempre que tenho a oportunidade.
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column is-flex is-align-items-center">
+						<div class="box width-10 has-background-light">
+							<figure class="image is-16by9">
+								<img src="assets/images/potion-pitch.jpg" alt="presentation">
+							</figure>
+							<div class="has-text-centered pt-2">
+								<span data-lang="en">Presenting the pitch of an educational platform - Dec 2024</span>
+								<span data-lang="pt-br">Apresentando o pitch de uma plataforma educacional - Dez 2024</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-8 text-box">
+							<div class="is-size-4">
+								<span data-lang="en">
+									Over the past <strong>2 years</strong>, I've worked on a variety of projects, from small data analysis to web applications.
+									<br><br>
+									I thrive on <strong>solving problems</strong> in creative ways and am especially drawn to projects where I can make a meaningful impact with out-of-the-box solutions.
+								</span>
+								<span data-lang="pt-br">
+									Nos últimos <strong>2 anos</strong>, trabalhei em diversos projetos, desde pequenas análises de dados até aplicações web.
+									<br><br>
+									Tenho prazer em <strong>resolver problemas</strong> de forma criativa e me sinto especialmente motivado em projetos nos quais posso causar um impacto significativo com soluções fora do comum.									
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column is-flex is-align-items-center">
+						<div class="box width-6 has-background-light">
+							<figure class="image is-square">
+								<img src="assets/images/3tentos-projeto.jpg" alt="presentation">
+							</figure>
+							<div class="has-text-centered pt-2">
+								<span data-lang="en">Presenting my first solution developed in a professional environment  - Aug 2022</span>
+								<span data-lang="pt-br">Apresentando minha primeira solução desenvolvida em um ambiente profissional - Ago 2022</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-8 text-box">
+							<div class="is-size-4">
+								<span data-lang="en">
+									I'm would love to colaborate on anything <strong>Laravel</strong> or <strong>Node-related</strong>.
+									<br><br>
+									Especially if it's <strong>unconventional</strong>, <strong>impactful</strong>, or just plain <strong>cool</strong>.
+								</span>
+								<span data-lang="pt-br">
+									Adoraria colaborar em qualquer projeto relacionado a <strong>Laravel</strong> ou <strong>Node</strong>.
+									<br><br>
+									Especialmente se for algo <strong>incomum</strong>, <strong>impactante</strong> ou simplesmente <strong>irado</strong>.
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column is-flex is-align-items-center">
+						<div class="box width-9 has-background-light">
+							<figure class="image is-16by9">
+								<img src="assets/images/cloud-experience-24.jpg" alt="presentation">
+							</figure>
+							<div class="has-text-centered pt-2">
+								<span data-lang="en">AWS Cloud Experience in Porto Alegre - Oct 2024</span>
+								<span data-lang="pt-br">AWS Cloud Experience em Porto Alegre - Out 2024</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-6 text-box">
+							<div class="is-size-4">
+								<span data-lang="en">
+									When I'm not coding, I enjoy singing, playing basketball, and learning new languages — both spoken and programming.
+								</span>
+								<span data-lang="pt-br">
+									Quando não estou programando, gosto de cantar, jogar basquete e aprender novos idiomas — tanto falados quanto de programação.
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column is-flex is-align-items-center">
+						<div class="box width-8 has-background-light">
+							<figure class="image is-5by4">
+								<img src="assets/images/sbc-upf.jpg" alt="presentation">
+							</figure>
+							<div class="has-text-centered pt-2">
+								<span data-lang="en">SBC Programming Marathon at the University of Passo Fundo - Aug 2024</span>
+								<span data-lang="pt-br">Maratona SBC de Programação na Universidade de Passo Fundo - Ago 2024</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="column"><div class="width-1"></div></div>
+				</div>
+			</div>
+
+			<a href="#projects" class="button is-fullwidth is-text is-medium" style="text-decoration: none;">
+				<span class="icon is-medium animate up-down"><i class="fa-2x fa-solid fa-caret-down"></i></span>
+			</a>
+		</section>
+
+		<section id="projects" data-x-wrapper class="is-flex is-flex-direction-column has-background-primary" style="min-height: 100vh;">
+			<div class="hero is-primary">
+				<div class="hero-body">
+					<div>
+						<h2 class="title">
+							<span data-lang="en">Projects</span>
+							<span data-lang="pt-br">Projetos</span>
+						</h2>
+						<p class="subtitle">
+							<span data-lang="en">What i make</span>
+							<span data-lang="pt-br">O que eu faço</span>
+						</p>
+					</div>
+				</div>
+			</div>	
+
+			<div class="container is-flex-grow-1 x-scroller">
+				<div class="columns is-mobile">
+					<div class="column">
+						<div class="width-6 has-background-success">
+							<span class="title">START</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="box width-6" >
+							<span class="title">size 6</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-6 has-background-primary">
+							<span class="title">size 1</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="box width-6" >
+							<span class="title">size 6</span>
+						</div>
+					</div>
+					
+					<div class="column">
+						<div class="width-6 has-background-primary">
+							<span class="title">size 1</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="box width-6" >
+							<span class="title">size 6</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-6 has-background-primary">
+							<span class="title">size 1</span>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="width-6 has-background-success" >
+							<span class="title">END</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a href="#contact-me" class="button is-primary is-fullwidth is-large" style="text-decoration: none;">
+				<span class="icon is-medium animate up-down"><i class="fa-2x fa-solid fa-caret-down"></i></span>
+			</a>
+		</section>
+
+		<section id="contact-me" class="hero">
+			<div class="hero-head">
+				<div class="hero">
+					<div class="hero-body">
+						<p class="title">
+							<span data-lang="en">Contact me</span>
+							<span data-lang="pt-br">Meu contatos</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-body"></div>
 		</section>
     </main>
 
     <footer class="footer">
     	<div class="content has-text-centered">
         	<p>&copy; 2024 Gustavo Campos.</p>
-
-			<p data-lang="en">Vectors and icons by <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> in CC Attribution License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.</p>			
-			<p data-lang="pt-br">Vetores e ícones por <a href="https://www.figma.com/community/file/1166831539721848736?ref=svgrepo.com" target="_blank">Solar Icons</a> sob a licença CC Attribution via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.</p>
-    		
 			<a href="https://bulma.io" target="_blank"><img src="assets/images/made-with-bulma.png" alt="Made with Bulma" width="256" height="48"></a>
     	</div>
     </footer>
@@ -159,5 +386,6 @@
     <script src="js/theme.js"></script>
 	<script src="js/lang.js"></script>
 	<script src="js/profile_carousel.js"></script>
+	<script src="js/scroll.js"></script>
 </body>
 </html>

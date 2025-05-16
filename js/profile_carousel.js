@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const profileCarouselDiv = document.getElementById('profile-carousel');
     const carouselImages = profileCarouselDiv.querySelectorAll("img");
-    const imageInterval = 5000; // 5 seconds
+    const imageInterval = 10000; // 10 seconds
 
-    setInterval(() => {
+    const changeImage = () => {
         const currentImage = Number(profileCarouselDiv.getAttribute("current-image"));
         const nextImage = (currentImage >= (carouselImages.length - 1)) ? 0 : (currentImage + 1);
         profileCarouselDiv.setAttribute("current-image", nextImage);
@@ -16,5 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             carouselImages[i].classList.add("is-hidden");
         }
-    }, imageInterval);
+    }
+
+    setInterval(changeImage, imageInterval);
+
+    profileCarouselDiv.addEventListener('click', changeImage);
 });

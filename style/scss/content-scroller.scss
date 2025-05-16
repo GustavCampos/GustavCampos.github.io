@@ -1,0 +1,52 @@
+
+$widths: (
+    '1': 100px,
+    '2': 200px,
+    '3': 300px,
+    '4': 400px,
+    '5': 500px,
+    '6': 600px,
+    '7': 700px,
+    '8': 800px,
+    '9': 900px,
+    '10': 1000px,
+    'half': 50vw,
+);
+
+.lock-scroll {
+    overflow: hidden;
+}
+
+.container.x-scroller {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    > .columns {
+        height: 100%;
+        flex-wrap: nowrap;
+        // width: max-content;
+
+        > .column {
+            height: 100%;
+
+            > div {
+                max-width: calc(100vw - 48px);
+
+                @each $key, $size in $widths {
+                    &.width-#{$key} {
+                        width: $size;
+                    }
+                }
+
+            }
+        }
+    }
+
+    // Removing scrollbar ________
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    // ___________________________
+}

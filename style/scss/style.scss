@@ -1,18 +1,21 @@
 // Redefine Bulma Variables
 
 $primary: hsl(247, 37%, 45%);
-// $text: blue;	
-// $link: blue;
-//	$info: blue;
-//	$success: blue;	
-//	$warning: blue;
-//	$danger: blue;
+// $text: white;	
+// $link: white;
+//	$info: white;
+//	$success: white;	
+//	$warning: white;
+//	$danger: white;
 
 // Importng Bulma
 @import "../../node_modules/bulma/sass";
 
 // Importing custom css
+@import "root.scss";
 @import "debug.scss";
 @import "svg.scss";
 @import "animations.scss";
-
+@import "hover.scss";
+@import "content-scroller.scss";
+@import "text.scss";
