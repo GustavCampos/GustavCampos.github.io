@@ -93,23 +93,24 @@ function applyDeltaX(wrapper, delta) {
     if (delta == 0) return;
 
     const scroller = wrapper.e.querySelector('.x-scroller');
+    const progress = wrapper.e.querySelector('[data-x-progress]');
 
     const movingRight = delta > 0;
     const movingLeft = delta < 0;
 
     const newX = scroller.scrollLeft + delta;
+    const maxScroll = scroller.scrollWidth - scroller.clientWidth;
 
     if (movingRight) {
-        const maxScroll = scroller.scrollWidth - scroller.clientWidth;
-
         scroller.scrollLeft = Math.min(newX, maxScroll);
         virtualY = Math.max(virtualY + (newX - maxScroll), wrapper.y);
-
     } else if (movingLeft) {
-        const minScroll = 0;
-
         scroller.scrollLeft = Math.max(newX, 0);
         virtualY = Math.min(virtualY + newX, wrapper.y);
+    }
+
+    if (progress) {
+        progress.value = Math.round((scroller.scrollLeft / maxScroll) * 100);
     }
 }
 

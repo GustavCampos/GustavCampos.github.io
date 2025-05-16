@@ -22460,6 +22460,16 @@ has-background-danger.is-hoverable:active {
 html {
   overflow: hidden;
 }
+html strong {
+  color: hsl(247, 37%, 45%);
+}
+html[data-theme=dark] strong {
+  color: hsl(247, 37%, 45%);
+}
+
+.has-separator > div:not(:last-child) {
+  border-bottom: 2px solid hsl(221, 14%, 29%);
+}
 
 .debug {
   border-width: 1px;
@@ -22590,6 +22600,13 @@ html {
   min-width: 300px;
   width: 50%;
   text-align: center;
+}
+
+html .text-invert {
+  color: hsl(221, 14%, 96%);
+}
+html[data-theme=dark] .text-invert {
+  color: hsl(221, 14%, 21%);
 }
 
 /*# sourceMappingURL=style.css.map */

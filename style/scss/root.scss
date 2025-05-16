@@ -1,3 +1,19 @@
 html {
     overflow: hidden;
+
+
+    strong {
+        color: $primary;
+    }
+
+    &[data-theme="dark"] {
+        strong {
+            color: $primary;
+        }
+    }
+}
+
+
+.has-separator > div:not(:last-child) {
+    border-bottom: 2px solid $text;
 }

@@ -11,3 +11,15 @@
         text-align: center;
     }
 }
+
+html {
+    .text-invert {
+        color: $light;
+    }
+
+    &[data-theme="dark"] {
+        .text-invert {
+            color: $dark;
+        }
+    }
+}

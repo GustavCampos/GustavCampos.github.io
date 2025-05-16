@@ -17,7 +17,7 @@ function changeLanguage(langCode) {
 document.addEventListener('DOMContentLoaded', () => {
 	const buttonClass = ["is-primary", "is-selected"]
 
-	changeLanguage("en");
+	const initialLang = navigator.language.startsWith("pt") ? "pt-br" : "en"; 
 
 	const langButtons = document.querySelectorAll(".lang-button");
 
@@ -29,5 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			button.classList.add(...buttonClass);
 		});
+
+		if (button.value === initialLang) {
+			button.click();
+		}
 	}
 });
