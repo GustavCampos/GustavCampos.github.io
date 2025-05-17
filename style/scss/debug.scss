@@ -10,3 +10,7 @@
     &.green {border-color: green;}
     &.blue {border-color: blue;}
 }
+
+.primary-border {
+    border: 2px solid $primary;
+}

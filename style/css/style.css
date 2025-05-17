@@ -22469,6 +22469,10 @@ html[data-theme=dark] strong {
 
 .has-separator > div:not(:last-child) {
   border-bottom: 2px solid hsl(221, 14%, 29%);
+  padding-bottom: 2rem;
+}
+.has-separator > div:not(:first-child) {
+  padding-top: 2rem;
 }
 
 .debug {
@@ -22490,6 +22494,10 @@ html[data-theme=dark] strong {
 }
 .debug.blue {
   border-color: blue;
+}
+
+.primary-border {
+  border: 2px solid hsl(247, 37%, 45%);
 }
 
 .svg.fill.black {

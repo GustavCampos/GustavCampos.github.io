@@ -14,6 +14,13 @@ html {
 }
 
 
-.has-separator > div:not(:last-child) {
-    border-bottom: 2px solid $text;
+.has-separator {
+    > div:not(:last-child) {
+        border-bottom: 2px solid $text;
+        padding-bottom: 2rem;
+    }
+
+    > div:not(:first-child) {
+        padding-top: 2rem;
+    }
 }
