@@ -3,14 +3,15 @@
 | Manualy creating scroll logic
 |--------------------------------------------------------------------
 */
-const maxY = document.documentElement.scrollHeight - window.innerHeight;
 let horizontalSections = null;
 
 // Interconnected variables -________________________________________
 let virtualY = 0;
 let lastTouchY = null;
+let lastTouchX = null;
 let lastMoveTime = null;
 let inheritDeltaY = null; // Used for touch acceleration
+let inheritDeltaX = null; // Used for touch acceleration
 
 // Points horizontal handling
 let horizontalMode = false;
@@ -18,39 +19,62 @@ let horizontalMode = false;
 // Tracking cursor/touch scroll _____________________________________
 function onWheel(e) {
     e.preventDefault();
-    applyDelta(e.deltaY);
+    applyDeltaY(e.deltaY);
 }
 
 function onTouchStart(e) {
     if (e.touches.length === 1) {
-        lastTouchY = e.touches[0].screenY; 
+        lastTouchY = e.touches[0].screenY;
+        lastTouchX = e.touches[0].screenX;
     }
 }
 
 function onTouchMove(e) {
-    if (e.touches.length === 1 && lastTouchY !== null) {
+    if (e.touches.length === 1 && lastTouchY !== null && lastTouchX !== null) {
         e.preventDefault();
 
         const currentTouchY = e.touches[0].screenY;
+        const currentTouchX = e.touches[0].screenX;
 
         inheritDeltaY = lastTouchY - currentTouchY;
+        inheritDeltaX = lastTouchX - currentTouchX;
 
-        applyDelta(inheritDeltaY);
+        // Prefer horizontal scroll
+        if (Math.abs(inheritDeltaX) >= Math.abs(inheritDeltaY)) {
+            applyDeltaX(inheritDeltaX);
+        } else {
+            applyDeltaY(inheritDeltaY);
+        }
+        
 
         lastTouchY = currentTouchY;
+        lastTouchX = currentTouchX;
     }
 }
 
 function onTouchEnd(e) {
-    if (!inheritDeltaY) return;
-
-    let velocity = inheritDeltaY;
     const friction = 0.95;
     const minVelocity = 0.5;
+    let direction = null;
+    let velocity;
+
+    if (inheritDeltaY) {
+        direction = 'y';
+        velocity = inheritDeltaY;
+
+    } else if (inheritDeltaX) {
+        direction = 'x';
+        velocity = inheritDeltaX;
+
+    } else {return;}
+
 
     function momentumScroll() {
         if (Math.abs(velocity) > minVelocity) {
-            applyDelta(velocity);
+            if (direction === 'y') {
+                applyDeltaY(velocity);
+            } else {applyDeltaX(velocity);}
+
             velocity *= friction;
             requestAnimationFrame(momentumScroll);
         }
@@ -58,7 +82,9 @@ function onTouchEnd(e) {
     requestAnimationFrame(momentumScroll);
 
     inheritDeltaY = null;
+    inheritDeltaX = null;
     lastTouchY = null;
+    lastTouchX = null;
 }
 
 // Handling horizontal sections _____________________________________
@@ -89,7 +115,7 @@ function findClosests(wrappers) {
 }
 
 // Scrolling screen _________________________________________________
-function applyDeltaX(wrapper, delta) {
+function applyDeltaOnXWrapper(wrapper, delta) {
     if (delta == 0) return;
 
     const scroller = wrapper.e.querySelector('.x-scroller');
@@ -114,27 +140,57 @@ function applyDeltaX(wrapper, delta) {
     }
 }
 
-function applyDelta(delta) {
+function applyDeltaX(delta) {
+    if (delta === 0) return;
+
+    const movingLeft = delta < 0;
+    
+    const { less, great } = findClosests(horizontalSections);
+    const onScrollSection = less === great;
+
+    if (onScrollSection) {
+        const scroller = less.e.querySelector('.x-scroller');
+        
+        const newX = scroller.scrollLeft + delta;
+        const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+
+        if (movingLeft) {
+            scroller.scrollLeft = Math.max(0, newX);
+        } else {
+            scroller.scrollLeft = Math.min(newX, maxScroll);
+        }
+
+        const progress = less.e.querySelector('[data-x-progress]')
+        if (progress) {
+            progress.value = Math.round((scroller.scrollLeft / maxScroll) * 100);
+        }
+    }
+}
+
+function applyDeltaY(delta) {
+    if (delta === 0) return;
+
     const movingDown = delta > 0;
     const movingUp = delta < 0;
-
+    
     const { less, great } = findClosests(horizontalSections);
     const newY = virtualY + delta;
 
-
     if (movingDown && great !== null) {
         virtualY = Math.min(newY, great.y);
-        applyDeltaX(great, Math.max(newY - great.y, 0));
+        applyDeltaOnXWrapper(great, Math.max(newY - great.y, 0));
     } else if (movingUp && less !== null) { 
         virtualY = Math.max(newY, less.y);
-        applyDeltaX(less, Math.min(newY - less.y, 0))
+        applyDeltaOnXWrapper(less, Math.min(newY - less.y, 0))
     } else {
         virtualY = newY
     }
 
     // Cap to 0 on negative numbers
     if (virtualY < 0) virtualY = 0;
+    
     // Cap max y
+    const maxY = document.documentElement.scrollHeight - window.innerHeight;
     if (virtualY > maxY) virtualY = maxY;
 }
 
