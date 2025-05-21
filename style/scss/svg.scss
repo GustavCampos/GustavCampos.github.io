@@ -29,3 +29,31 @@ html[data-theme="dark"] {
 	&.success{filter: brightness(0) invert(63%) sepia(35%) saturate(844%) hue-rotate(88deg) brightness(94%) contrast(105%);}
 	&.warning {filter: brightness(0) invert(97%) sepia(33%) saturate(4932%) hue-rotate(316deg) brightness(109%) contrast(102%);}
 }
+
+html {
+	.button.is-text {
+		img.svg-fill {
+			@include filter-whitesmoke;
+		}
+
+		&:hover {
+			img.svg-fill {
+				@include filter-jet;
+			}
+		}
+	}
+
+	&[data-theme="dark"] {
+		.button.is-text {
+			img.svg-fill {
+				@include filter-jet;
+			}
+
+			&:hover {
+				img.svg-fill {
+					@include filter-whitesmoke;
+				}
+			}
+		}
+	}
+}

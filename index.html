@@ -35,7 +35,7 @@
 	    				<span data-lang="pt-br">sobre mim</span>
 	   				</a>
 
-					<div class="navbar-item has-dropdown is-hoverable">
+					<div class="navbar-item has-dropdown is-clickable">
 						<a class="navbar-link is-capitalized" href="#projects">
 							<span data-lang="en">projects</span>
 							<span data-lang="pt-br">projetos</span>
@@ -43,6 +43,29 @@
 
 						<div class="navbar-dropdown">
 							<a href="#pega-fila" class="navbar-item">PegaFila</a>
+							<a href="#sus-cube" class="navbar-item">SusCube</a>
+							
+							<a href="#teg-to-pveg" class="navbar-item">
+								<span data-lang="en">TEG to PVEG prediction</span>
+								<span data-lang="pt-br">Previsão de TEG para PVEG</span>
+							</a>
+							
+							<a href="#animation-dashboard" class="navbar-item">
+								<span data-lang="en">Analysis of animated media</span>
+								<span data-lang="pt-br">Análise de mídias animadas</span>
+							</a>
+
+							<hr class="navbar-divider">
+
+							<a href="#coming-soon" class="navbar-item">
+								<span data-lang="en">Coming Soon</span>
+								<span data-lang="pt-br">Disponível em breve</span>
+							</a>
+
+							<hr class="navbar-divider">
+
+							<a href="#pega-fila-2" class="navbar-item">PegaFila 2.0</a>
+							<a href="#PoTION" class="navbar-item">PoTION</a>
 						</div>
 					</div>
 
@@ -342,6 +365,7 @@
 
 								<div class="pt-2 pb-4">
 									<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+									<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 									<img src="https://img.shields.io/badge/Bulma-00D1B2?style=for-the-badge&logo=Bulma&logoColor=white" alt="Bulma CSS">
 									<img src="https://img.shields.io/badge/Chart%20js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="ChartJS">
 								</div>
@@ -393,12 +417,14 @@
 								<div class="buttons">
 									<a href="https://github.com/JuanFricke/SusCube" target="_blank" class="button is-primary is-outlined">
 										<span class="icon"><i class="fa-solid fa-code"></i></span>
-										<span>Source code</span>
+										<span data-lang="en">Source code</span>
+										<span data-lang="pt-br">Código fonte</span>
 									</a>
 
 									<a href="assets/docs/suscube.pdf" target="_blank" class="button is-primary is-outlined">
 										<span class="icon"><i class="fa-solid fa-info"></i></span>
-										<span>More about</span>
+										<span data-lang="en">More about</span>
+										<span data-lang="pt-br">Mais sobre</span>
 									</a>
 								</div>
 							</div>
@@ -423,14 +449,14 @@
 								</div>
 								<div class="is-size-5">
 									<span data-lang="en">
-										A comprehensive data analysis of the Brazilian Unified Health System (SUS) was conducted using data cubes, OLAP, and concepts from Big Data, Analytics, and Metrics. 
+										A web application developed to present the results of a comparative environmental analysis between thermoelectric power plants and photovoltaic panels. 
 										<br>
-										The process included the creation of tools to automate the extraction of DATASUS data via the command line and the conversion of legacy data formats into modern, analysis-ready structures, enabling efficient and scalable exploration of health-related datasets.
+										Through interactive visualizations and automated calculations, the application allows users to compare the pollution levels of fossil fuel-based energy with the cleaner alternatives offered by solar generation.
 									</span>
 									<span data-lang="pt-br">
-										Uma análise abrangente dos dados do Sistema Único de Saúde (SUS) utilizando cubos de dados, OLAP e conceitos de Big Data, Analytics e Métricas.
+										Aplicativo web desenvolvido para apresentar os resultados de uma análise comparativa do impacto ambiental entre usinas termoelétricas e painéis fotovoltaicos.
 										<br>
-										O processo incluiu a criação de ferramentas para automatizar a extração de dados do DATASUS via linha de comando e a conversão de formatos legados para estruturas modernas e prontas para análise, permitindo uma exploração eficiente e escalável dos conjuntos de dados relacionados à saúde.
+										Por meio de visualizações interativas e cálculos automatizados, o aplicativo possibilita a comparação entre os níveis de poluição da geração de energia com combustíveis fósseis e as alternativas mais limpas fornecidas pela energia solar.
 									</span>
 								</div>
 
@@ -443,18 +469,161 @@
 								<div class="buttons">
 									<a href="https://github.com/GustavCampos/TEG-to-PVEG-Prediction" target="_blank" class="button is-primary is-outlined">
 										<span class="icon"><i class="fa-solid fa-code"></i></span>
-										<span>Source code</span>
+										<span data-lang="en">Source code</span>
+										<span data-lang="pt-br">Código fonte</span>
 									</a>
 
-									<!-- <a href="assets/docs/suscube.pdf" target="_blank" class="button is-primary is-outlined">
-										<span class="icon"><i class="fa-solid fa-info"></i></span>
-										<span>More about</span>
-									</a> -->
-
-									<a href="https://teg-to-pveg-prediction.onrender.com" target="_blank" class="button is-primary is-outlined">
+									<a href="https://teg-to-pveg-prediction.onrender.com" target="_blank" class="button is-primary">
 										<span class="icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-										<span>Go to app</span>
+										<span data-lang="en">Go to app</span>
+										<span data-lang="pt-br">Acessar aplicativo</span>
 									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="animation-dashboard">
+					<div class="fixed-grid has-1-cols-mobile has-3-cols-tablet">
+						<div class="grid is-gap-0">
+							<div class="cell p-2">
+								<figure class="image is-quare primary-border">
+									<img src="assets/images/animation-dashboard.png" alt="">
+								</figure>
+							</div>
+							<div class="cell is-col-span-2 p-2 is-flex is-flex-direction-column is-justify-content-center">
+								<div class="pb-3">
+									<span class="title">
+										<span data-lang="en">Analysis of animated media</span>
+										<span data-lang="pt-br">Análise de mídias animadas</span>
+									</span>
+								</div>
+								<div class="is-size-5">
+									<span data-lang="en">
+										Dashboard developed to analyze the evolution and the sociocultural and economic aspects of the animation industry in the global audiovisual landscape.
+										<br>
+										The panel presents consolidated data on the production, distribution, and popularity of animations, aiming to answer questions about historical growth, profitability, diversity of occupations involved, and stigmas associated with the genre.
+										<br>
+										The analysis served as the final project for a data engineering training program.
+									</span>
+									<span data-lang="pt-br">
+										Dashboard desenvolvido para analisar a evolução e os aspectos socioculturais e econômicos da indústria de animações no cenário audiovisual global. 
+										<br>
+										O painel apresenta dados consolidados sobre a produção, distribuição e popularidade de animações, com o objetivo de responder questões sobre crescimento histórico, lucratividade, diversidade de ocupações envolvidas e estigmas associados ao gênero.
+										<br>
+										A análise serviu como entrega final de um programa de formação para engenharia de dados. 
+									</span>
+								</div>
+
+								<div class="pt-2 pb-4">
+									<img src="https://img.shields.io/badge/Python-306998?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python">
+									<img src="https://img.shields.io/badge/Apache_Spark-000000?style=for-the-badge&logo=apachespark&logoColor=#E35A16" alt="Apache Spark">
+									<img src="https://img.shields.io/badge/Amazon_Web_Services-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS">
+								</div>
+
+								<div class="buttons">
+									<a href="https://github.com/GustavCampos/Programa-de-bolsas-Compasso" target="_blank" class="button is-primary is-outlined">
+										<span class="icon"><i class="fa-solid fa-code"></i></span>
+										<span data-lang="en">Source code</span>
+										<span data-lang="pt-br">Código fonte</span>
+									</a>
+
+									<a href="https://github.com/GustavCampos/Programa-de-bolsas-Compasso/blob/main/Sprint%2010/Desafios/README.md" target="_blank" class="button is-primary is-outlined">
+										<span class="icon"><i class="fa-solid fa-info"></i></span>
+										<span data-lang="en">More about</span>
+										<span data-lang="pt-br">Mais sobre</span>
+									</a>
+
+									<a href="assets/docs/animation-dashboard.pdf" target="_blank" class="button is-primary">
+										<span class="icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+										<span data-lang="en">Go to dashboard</span>
+										<span data-lang="pt-br">Acessar dashboard</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="coming-soon">
+					<div class="title has-text-centered">
+						<span data-lang="en">Coming Soon</span>
+						<span data-lang="pt-br">Disponível em breve</span>
+					</div>
+				</div>
+
+				<div id="pega-fila-2">
+					<div class="fixed-grid has-1-cols-mobile has-3-cols-tablet">
+						<div class="grid is-gap-0">
+							<div class="cell p-2">
+								<figure class="image is-quare primary-border">
+									<img src="assets/images/pegafila-2.png" alt="">
+								</figure>
+							</div>
+							<div class="cell is-col-span-2 p-2 is-flex is-flex-direction-column is-justify-content-center">
+								<div class="pb-3">
+									<span class="title">PegaFila 2.0</span>
+								</div>
+								<div class="is-size-5">
+									<span data-lang="en">
+										Complete overhaul of the system developed for the Ijuí Registry Office.
+										<br>
+										The new application is designed to simplify the implementation of queue management for small and medium-sized businesses, eliminating the need for complex infrastructure.
+										<br>
+										The entire process is handled directly through the web-based application, offering convenience and low adoption costs.	
+									</span>
+									<span data-lang="pt-br">
+										Reformulação completa do sistema criado para o Cartório de Ijuí.
+										<br>
+										A nova aplicação é projetada para facilitar a implementação do controle de filas em negócios de pequeno e médio porte, eliminando a necessidade de infraestruturas complexas.
+										<br>
+										Todo o processo é conduzido diretamente pela aplicação, acessível via web, oferecendo praticidade e baixo custo de adoção.
+									</span>
+								</div>
+
+								<div class="pt-2 pb-4">
+									<img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+									<img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="MariaDB">
+									<img src="https://img.shields.io/badge/Bulma-00D1B2?style=for-the-badge&logo=Bulma&logoColor=white" alt="Bulma CSS">
+									<img src="https://img.shields.io/badge/Alpine%20JS-8BC0D0?style=for-the-badge&logo=alpinedotjs&logoColor=black" alt="AlpineJS">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="potion">
+					<div class="fixed-grid has-1-cols-mobile has-3-cols-tablet">
+						<div class="grid is-gap-0">
+							<div class="cell p-2">
+								<figure class="image is-quare primary-border">
+									<img src="assets/images/potion.png" alt="">
+								</figure>
+							</div>
+							<div class="cell is-col-span-2 p-2 is-flex is-flex-direction-column is-justify-content-center">
+								<div class="pb-3">
+									<span class="title">PoTION</span>
+								</div>
+								<div class="is-size-5">
+									<span data-lang="en">
+										Educational platform gamified through tabletop RPG systems.
+										<br>
+										The platform offers character creation, interactive tools for classroom engagement, and collaborative features for lesson planning, empowering teachers and enhancing the learning experience through creativity and immersion.
+									</span>
+									<span data-lang="pt-br">
+										Plataforma educacional gamificada inspirada em sistemas de RPG de mesa.
+										<br>
+										A solução oferece criação de personagens, ferramentas interativas para uso em sala de aula e recursos colaborativos para o planejamento didático entre professores, promovendo engajamento e criatividade no processo de ensino-aprendizagem.
+									</span>
+								</div>
+
+								<div class="pt-2 pb-4">
+									<img src="https://img.shields.io/badge/fastify-202020?style=for-the-badge&logo=fastify&logoColor=white" alt="Fastify">
+									<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+									<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+									<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass">
+									<img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
 								</div>
 							</div>
 						</div>
@@ -467,19 +636,131 @@
 			</a> -->
 		</section>
 
-		<section id="contact-me" class="hero is-primary">
-			<div class="hero-head">
-				<div class="hero">
-					<div class="hero-body">
-						<p class="title">
-							<span data-lang="en">Contact me</span>
-							<span data-lang="pt-br">Meu contatos</span>
-						</p>
-					</div>
+		<section id="contact-me" class="hero is-primary" style="min-height: 75vh;">
+			<div class="hero">
+				<div class="hero-body">
+					<p class="title text-invert">
+						<span data-lang="en">Contact me</span>
+						<span data-lang="pt-br">Meu contatos</span>
+					</p>
 				</div>
 			</div>
 
-			<div class="hero-body"></div>
+			<div class="container is-flex-grow-1">
+				<div class="fixed-grid has-1-cols-mobile has-2-cols-tablet">
+					<div class="grid">
+						<div class="cell p-2 is-flex is-flex-direction-column is-justify-content-center">
+							<div class="has-text-centered is-size-4 text-invert pb-6">
+								<span data-lang="en">You're welcome to contact me using any of the options below.</span>
+								<span data-lang="pt-br">Sinta-se à vontade para entrar em contato por qualquer um dos meios abaixo.</span>
+							</div>
+
+							<div class="px-5 text-invert">
+								<div>
+									<span class="icon-text">
+										<span class="icon">
+											<i class="fa-solid fa-envelope-circle-check"></i>
+										</span>
+										<span>gustavop.campos2004@gmail.com</span>
+									</span>
+								</div>
+								
+								<div>
+									<span class="icon-text">
+										<span class="icon">
+											<i class="fa-solid fa-envelope"></i>
+										</span>
+										<span>gustavo.campos@sou.unijui.edu.br</span>
+									</span>
+								</div>
+
+								<div class="py-3">
+									<hr class="divider">
+								</div>
+
+								<div class="is-flex is-justify-content-center">
+									<a href="https://wa.me/5555992118180" class="button is-large is-text" style="text-decoration: none;">
+										<span class="icon">
+											<img class="svg-fill" src="assets/icons/whatsapp-logo.svg" alt="Github">
+										</span>
+									</a>
+									
+									<a href="https://www.linkedin.com/in/gustavo-campos-a2573722a/" class="button is-large is-text" style="text-decoration: none;">
+										<span class="icon">
+											<img class="svg-fill" src="assets/icons/linkedin_logo.svg" alt="Github">
+										</span>
+									</a>
+									
+									<a href="https://github.com/GustavCampos" class="button is-large is-text" style="text-decoration: none;">
+										<span class="icon">
+											<img class="svg-fill" src="assets/icons/github_logo.svg" alt="Github">
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="cell px-4 pt-4 pb-6">
+							<form id="contact-form">
+								<div class="has-text-centered pb-3">
+									<div class="is-size-4 text-invert">
+										<span data-lang="en">Send me a message</span>
+										<span data-lang="pt-br">Mande uma mensagem</span>
+									</div>
+								</div>
+
+								<div class="field pb-3">
+									<label class="label text-invert">
+										<span data-lang="en">Name</span>
+										<span data-lang="pt-br">Nome</span>
+									</label>
+
+									<div class="control has-icons-left">
+										<input name="name" type="text" class="input" placeholder="John Doe">
+										<span class="icon is-left">
+											<i class="fa-solid fa-signature"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="field pb-3">
+									<label class="label text-invert">
+										<span data-lang="en">Contact email</span>
+										<span data-lang="pt-br">Email de contato</span>
+									</label>
+
+									<div class="control has-icons-left">
+										<input name="email" type="email" class="input" placeholder="hello@example.com">
+										<span class="icon is-left">
+											<i class="fa-solid fa-envelope"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="field pb-3">
+									<label class="label text-invert">
+										<span data-lang="en">Message</span>
+										<span data-lang="pt-br">Mensagem</span>
+									</label>
+
+									<div class="control">
+										<textarea class="textarea" name="message" placeholder="Hello"></textarea>
+									</div>
+								</div>
+
+								<div class="field">
+									<div class="control">
+										<button type="submit" class="button is-text" style="text-decoration: none;">
+											<span class="text-invert" data-lang="en">Submit message</span>
+											<span class="text-invert" data-lang="pt-br">Enviar mensagem</span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
     </main>
 
@@ -497,5 +778,6 @@
 	<script src="js/lang.js"></script>
 	<script src="js/profile_carousel.js"></script>
 	<script src="js/scroll.js"></script>
+	<script src="js/mail.js"></script>
 </body>
 </html>

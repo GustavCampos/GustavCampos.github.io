@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const initialLang = navigator.language.startsWith("pt") ? "pt-br" : "en"; 
 
-	const langButtons = document.querySelectorAll(".lang-button");
+	const langButtons = document.querySelectorAll('.lang-button');
 
 	for (let button of langButtons) {
 		button.addEventListener("click", () => {

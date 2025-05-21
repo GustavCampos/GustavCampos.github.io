@@ -17,9 +17,25 @@ html {
         color: $light;
     }
 
+    .button {
+        &:hover {
+            .text-invert {
+                color: $dark;
+            }
+        }
+    }
+
     &[data-theme="dark"] {
         .text-invert {
             color: $dark;
+        }
+
+        .button {
+            &:hover {
+                .text-invert {
+                    color: $light;
+                }
+            }
         }
     }
 }

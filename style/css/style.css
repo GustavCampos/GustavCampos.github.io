@@ -22463,8 +22463,16 @@ html {
 html strong {
   color: hsl(247, 37%, 45%);
 }
+html hr.divider {
+  background-color: hsl(221, 14%, 96%);
+  height: 0.125em;
+  margin: 0.25rem 0;
+}
 html[data-theme=dark] strong {
   color: hsl(247, 37%, 45%);
+}
+html[data-theme=dark] hr.divider {
+  background-color: hsl(221, 14%, 21%);
 }
 
 .has-separator > div:not(:last-child) {
@@ -22522,6 +22530,19 @@ html[data-theme=dark] strong {
   filter: brightness(0) invert(97%) sepia(33%) saturate(4932%) hue-rotate(316deg) brightness(109%) contrast(102%);
 }
 
+html .button.is-text img.svg-fill {
+  filter: brightness(0) invert(100%) sepia(6%) saturate(21%) hue-rotate(335deg) brightness(114%) contrast(92%);
+}
+html .button.is-text:hover img.svg-fill {
+  filter: brightness(0) invert(16%) sepia(0%) saturate(1567%) hue-rotate(213deg) brightness(95%) contrast(83%);
+}
+html[data-theme=dark] .button.is-text img.svg-fill {
+  filter: brightness(0) invert(16%) sepia(0%) saturate(1567%) hue-rotate(213deg) brightness(95%) contrast(83%);
+}
+html[data-theme=dark] .button.is-text:hover img.svg-fill {
+  filter: brightness(0) invert(100%) sepia(6%) saturate(21%) hue-rotate(335deg) brightness(114%) contrast(92%);
+}
+
 @keyframes up-down {
   0% {
     transform: translateY(0);
@@ -22535,10 +22556,6 @@ html[data-theme=dark] strong {
 }
 .animate.up-down {
   animation: up-down 1s infinite;
-}
-
-.on-hover-pointer:hover {
-  cursor: pointer;
 }
 
 .lock-scroll {
@@ -22613,8 +22630,14 @@ html[data-theme=dark] strong {
 html .text-invert {
   color: hsl(221, 14%, 96%);
 }
+html .button:hover .text-invert {
+  color: hsl(221, 14%, 21%);
+}
 html[data-theme=dark] .text-invert {
   color: hsl(221, 14%, 21%);
+}
+html[data-theme=dark] .button:hover .text-invert {
+  color: hsl(221, 14%, 96%);
 }
 
 /*# sourceMappingURL=style.css.map */

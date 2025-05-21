@@ -6,9 +6,19 @@ html {
         color: $primary;
     }
 
+    hr.divider {
+        background-color: $light;
+        height: 0.125em;
+        margin: 0.25rem 0;
+    }
+
     &[data-theme="dark"] {
         strong {
             color: $primary;
+        }
+
+        hr.divider {
+            background-color: $dark;
         }
     }
 }
