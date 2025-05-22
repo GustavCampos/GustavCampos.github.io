@@ -1,27 +1,13 @@
-.text-box {
-    height:  100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > div {
-        min-width: 300px;
-        width: 50%;
-
-        text-align: center;
-    }
-}
-
 html {
     .text-invert {
         color: $light;
     }
 
-    .button {
+    .button.text-invert {
+        color: $light;
+
         &:hover {
-            .text-invert {
-                color: $dark;
-            }
+            color: $dark;
         }
     }
 
@@ -30,11 +16,11 @@ html {
             color: $dark;
         }
 
-        .button {
+        .button.text-invert {
+            color: $light;
+
             &:hover {
-                .text-invert {
-                    color: $light;
-                }
+                color: $light;
             }
         }
     }

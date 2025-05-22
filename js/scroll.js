@@ -3,8 +3,6 @@
 | Manualy creating scroll logic
 |--------------------------------------------------------------------
 */
-let horizontalSections = null;
-
 // Interconnected variables -________________________________________
 let virtualY = 0;
 let lastTouchY = null;
@@ -145,7 +143,7 @@ function applyDeltaX(delta) {
 
     const movingLeft = delta < 0;
     
-    const { less, great } = findClosests(horizontalSections);
+    const { less, great } = findClosests(getHorizontalSectionsY());
     const onScrollSection = less === great;
 
     if (onScrollSection) {
@@ -173,7 +171,7 @@ function applyDeltaY(delta) {
     const movingDown = delta > 0;
     const movingUp = delta < 0;
     
-    const { less, great } = findClosests(horizontalSections);
+    const { less, great } = findClosests(getHorizontalSectionsY());
     const newY = virtualY + delta;
 
     if (movingDown && great !== null) {
@@ -223,8 +221,6 @@ function smoothScroll(targetY) {
 
 // Registering events window events _______________________________________________
 document.addEventListener('DOMContentLoaded', () => {
-    horizontalSections = getHorizontalSectionsY();
-
     window.addEventListener('wheel', onWheel, { passive: true });
     window.addEventListener('touchstart', onTouchStart, { passive: true });
     window.addEventListener('touchmove', onTouchMove, { passive: true });

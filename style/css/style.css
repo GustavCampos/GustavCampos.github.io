@@ -22468,12 +22468,6 @@ html hr.divider {
   height: 0.125em;
   margin: 0.25rem 0;
 }
-html[data-theme=dark] strong {
-  color: hsl(247, 37%, 45%);
-}
-html[data-theme=dark] hr.divider {
-  background-color: hsl(221, 14%, 21%);
-}
 
 .has-separator > div:not(:last-child) {
   border-bottom: 2px solid hsl(221, 14%, 29%);
@@ -22536,9 +22530,6 @@ html .button.is-text img.svg-fill {
 html .button.is-text:hover img.svg-fill {
   filter: brightness(0) invert(16%) sepia(0%) saturate(1567%) hue-rotate(213deg) brightness(95%) contrast(83%);
 }
-html[data-theme=dark] .button.is-text img.svg-fill {
-  filter: brightness(0) invert(16%) sepia(0%) saturate(1567%) hue-rotate(213deg) brightness(95%) contrast(83%);
-}
 html[data-theme=dark] .button.is-text:hover img.svg-fill {
   filter: brightness(0) invert(100%) sepia(6%) saturate(21%) hue-rotate(335deg) brightness(114%) contrast(92%);
 }
@@ -22562,81 +22553,104 @@ html[data-theme=dark] .button.is-text:hover img.svg-fill {
   overflow: hidden;
 }
 
-.container.x-scroller {
+.x-scroller {
   overflow-x: hidden;
   overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.container.x-scroller > .columns {
+.x-scroller > .scroller-item {
   height: 100%;
-  flex-wrap: nowrap;
-}
-.container.x-scroller > .columns > .column {
-  height: 100%;
-}
-.container.x-scroller > .columns > .column > div {
-  max-width: calc(100vw - 48px);
-}
-.container.x-scroller > .columns > .column > div.width-1 {
-  width: 100px;
-}
-.container.x-scroller > .columns > .column > div.width-2 {
-  width: 200px;
-}
-.container.x-scroller > .columns > .column > div.width-3 {
-  width: 300px;
-}
-.container.x-scroller > .columns > .column > div.width-4 {
-  width: 400px;
-}
-.container.x-scroller > .columns > .column > div.width-5 {
-  width: 500px;
-}
-.container.x-scroller > .columns > .column > div.width-6 {
-  width: 600px;
-}
-.container.x-scroller > .columns > .column > div.width-7 {
-  width: 700px;
-}
-.container.x-scroller > .columns > .column > div.width-8 {
-  width: 800px;
-}
-.container.x-scroller > .columns > .column > div.width-9 {
-  width: 900px;
-}
-.container.x-scroller > .columns > .column > div.width-10 {
-  width: 1000px;
-}
-.container.x-scroller > .columns > .column > div.width-half {
-  width: 50vw;
-}
-.container.x-scroller::-webkit-scrollbar {
-  display: none;
-}
-
-.text-box {
-  height: 100%;
+  max-width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex: 0 0 auto;
 }
-.text-box > div {
+.x-scroller > .scroller-item.width-1 {
+  width: min(100px, 100vw);
+}
+.x-scroller > .scroller-item.width-2 {
+  width: min(200px, 100vw);
+}
+.x-scroller > .scroller-item.width-3 {
+  width: min(300px, 100vw);
+}
+.x-scroller > .scroller-item.width-4 {
+  width: min(400px, 100vw);
+}
+.x-scroller > .scroller-item.width-5 {
+  width: min(500px, 100vw);
+}
+.x-scroller > .scroller-item.width-6 {
+  width: min(600px, 100vw);
+}
+.x-scroller > .scroller-item.width-7 {
+  width: min(700px, 100vw);
+}
+.x-scroller > .scroller-item.width-8 {
+  width: min(800px, 100vw);
+}
+.x-scroller > .scroller-item.width-9 {
+  width: min(900px, 100vw);
+}
+.x-scroller > .scroller-item.width-10 {
+  width: min(1000px, 100vw);
+}
+.x-scroller > .scroller-item.width-half {
+  width: min(50vw, 100vw);
+}
+.x-scroller > .scroller-item.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.x-scroller > .scroller-item.text-box > div {
   min-width: 300px;
-  width: 50%;
-  text-align: center;
+  max-width: 50%;
+}
+.x-scroller > .scroller-item.image-box {
+  height: 100%;
+}
+.x-scroller > .scroller-item.image-box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 100%;
+}
+.x-scroller > .scroller-item.image-box .box .image-wrapper {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.x-scroller > .scroller-item.image-box .box .image-wrapper figure img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.x-scroller::-webkit-scrollbar {
+  display: none;
 }
 
 html .text-invert {
   color: hsl(221, 14%, 96%);
 }
-html .button:hover .text-invert {
+html .button.text-invert {
+  color: hsl(221, 14%, 96%);
+}
+html .button.text-invert:hover {
   color: hsl(221, 14%, 21%);
 }
 html[data-theme=dark] .text-invert {
   color: hsl(221, 14%, 21%);
 }
-html[data-theme=dark] .button:hover .text-invert {
+html[data-theme=dark] .button.text-invert {
+  color: hsl(221, 14%, 96%);
+}
+html[data-theme=dark] .button.text-invert:hover {
   color: hsl(221, 14%, 96%);
 }
 

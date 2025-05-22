@@ -45,9 +45,9 @@ html {
 
 	&[data-theme="dark"] {
 		.button.is-text {
-			img.svg-fill {
-				@include filter-jet;
-			}
+			// img.svg-fill {
+			// 	@include filter-jet;
+			// }
 
 			&:hover {
 				img.svg-fill {

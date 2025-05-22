@@ -12,15 +12,15 @@ html {
         margin: 0.25rem 0;
     }
 
-    &[data-theme="dark"] {
-        strong {
-            color: $primary;
-        }
+    // &[data-theme="dark"] {
+    //     strong {
+    //         color: $primary;
+    //     }
 
-        hr.divider {
-            background-color: $dark;
-        }
-    }
+    //     hr.divider {
+    //         background-color: $dark;
+    //     }
+    // }
 }
 
 
