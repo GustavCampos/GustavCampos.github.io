@@ -7,9 +7,7 @@
 let virtualY = 0;
 let lastTouchY = null;
 let lastTouchX = null;
-let lastMoveTime = null;
 let inheritDeltaY = null; // Used for touch acceleration
-let inheritDeltaX = null; // Used for touch acceleration
 
 // Points horizontal handling
 let horizontalMode = false;
@@ -35,15 +33,14 @@ function onTouchMove(e) {
         const currentTouchX = e.touches[0].screenX;
 
         inheritDeltaY = lastTouchY - currentTouchY;
-        inheritDeltaX = lastTouchX - currentTouchX;
+        const deltaX = lastTouchX - currentTouchX;
 
         // Prefer horizontal scroll
-        if (Math.abs(inheritDeltaX) >= Math.abs(inheritDeltaY)) {
-            applyDeltaX(inheritDeltaX);
+        if (Math.abs(deltaX) >= Math.abs(inheritDeltaY)) {
+            applyDeltaX(deltaX);
         } else {
             applyDeltaY(inheritDeltaY);
         }
-        
 
         lastTouchY = currentTouchY;
         lastTouchX = currentTouchX;
@@ -51,36 +48,25 @@ function onTouchMove(e) {
 }
 
 function onTouchEnd(e) {
-    const friction = 0.95;
-    const minVelocity = 0.5;
-    let direction = null;
-    let velocity;
-
     if (inheritDeltaY) {
-        direction = 'y';
-        velocity = inheritDeltaY;
+        const friction = 0.95;
+        const minVelocity = 0.5;
+        let = velocity = inheritDeltaY;
 
-    } else if (inheritDeltaX) {
-        direction = 'x';
-        velocity = inheritDeltaX;
-
-    } else {return;}
-
-
-    function momentumScroll() {
-        if (Math.abs(velocity) > minVelocity) {
-            if (direction === 'y') {
+        // Using momentum scroll only on y-axis swipes
+        function momentumScroll() {
+            if (Math.abs(velocity) > minVelocity) {
                 applyDeltaY(velocity);
-            } else {applyDeltaX(velocity);}
+            }
 
             velocity *= friction;
             requestAnimationFrame(momentumScroll);
         }
+        requestAnimationFrame(momentumScroll);
     }
-    requestAnimationFrame(momentumScroll);
+
 
     inheritDeltaY = null;
-    inheritDeltaX = null;
     lastTouchY = null;
     lastTouchX = null;
 }
